@@ -18,10 +18,10 @@ jobs:
       contents: read
       id-token: write # lets the job prove to the panel which repo and branch it built
     concurrency:
-      group: deploy-go-health-check
+      group: deploy-sample-health-check
       cancel-in-progress: false
     env:
-      SERVICE: go-health-check
+      SERVICE: sample-health-check
       PANEL_URL: https://deploy.pflabs.in
       WORKDIR: .     # the folder with the project
     steps:
